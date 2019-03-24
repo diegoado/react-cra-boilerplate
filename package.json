@@ -2,16 +2,33 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -s public -c storybook -p 6006 --quiet",
+    "storybook:build": "build-storybook -s public -c storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.12",
+    "@storybook/addon-links": "^3.4.12",
+    "@storybook/react": "^3.4.12",
+    "chai": "^4.2.0",
+    "deep-freeze": "0.0.1",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "dependencies": {
+    "connected-react-router": "^6.3.2",
+    "history": "^4.9.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "eslintConfig": {
     "extends": "react-app"
