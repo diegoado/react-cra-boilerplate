@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
 
-class App extends Component {
+import logo from './logo.svg';
+import './app.css';
+
+class App extends PureComponent {
   render() {
     return (
       <div className="App">
