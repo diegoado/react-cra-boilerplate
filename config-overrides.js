@@ -1,9 +1,8 @@
 /* config-overrides.js */
 const rewireReactHotLoader = require('react-app-rewire-hot-loader');
-const rewireAliases = require('react-app-rewire-aliases');
-const rewireEslint = require('react-app-rewire-eslint');
 const path = require('path');
 
+const { override, useEslintRc, addWebpackAlias } = require('customize-cra');
 const { paths } = require('react-app-rewired');
 
 let aliases = {
@@ -19,12 +18,9 @@ if (process.env.NODE_ENV === 'production') {
   };
 }
 
-const override = (config, env) => {
-  config = rewireEslint(config, env);
-  config = rewireReactHotLoader(config, env);
-  config = rewireAliases.aliasesOptions(aliases)(config, env);
-
+const hotLoader = _ => config => {
+  config = rewireReactHotLoader(config, process.env);
   return config;
 };
 
-module.exports = override;
+module.exports = override(hotLoader(), useEslintRc(), addWebpackAlias(aliases));

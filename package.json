@@ -6,9 +6,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "build:analyzer": "source-map-explorer 'build/static/js/*.js'",
-    "test": "react-app-rewired test --env=jsdom",
-    "test:coverage": "npm test -- --coverage",
-    "test:watch": "npm test -- --watch",
+    "test": "react-app-rewired test --env=jsdom --no-watch",
+    "test:watch": "npm test -- --watchAll",
+    "test:coverage": "npm run test:watch -- --coverage",
     "lint": "semistandard --verbose | snazzy",
     "lint:fix": "semistandard --fix",
     "lint:watch": "gulp",
@@ -22,6 +22,7 @@
     "@storybook/addon-links": "^3.4.12",
     "@storybook/react": "^3.4.12",
     "chai": "^4.2.0",
+    "customize-cra": "^0.2.12",
     "deep-freeze": "0.0.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
@@ -35,8 +36,7 @@
     "lint-staged": "^8.1.5",
     "node-sass": "^4.11.0",
     "prettier": "1.16.4",
-    "react-app-rewire-aliases": "^0.2.0",
-    "react-app-rewire-eslint": "^0.2.3",
+    "pretty-quick": "^1.10.0",
     "react-app-rewire-hot-loader": "^2.0.1",
     "react-app-rewired": "^2.1.1",
     "react-hot-loader": "^4.8.0",
@@ -65,10 +65,14 @@
     "redux-thunk": "^2.3.0"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.story.{js,jsx,mjs,ts,tsx}",
-      "!<rootDir>/node_modules/"
+      "!<rootDir>/node_modules/",
+      "!src/index.js",
+      "!src/serviceWorker.js",
+      "!src/setupTests.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -80,9 +84,6 @@
     },
     "coverageReporters": [
       "text"
-    ],
-    "snapshotSerializers": [
-      "my-serializer-module"
     ]
   },
   "husky": {
@@ -92,7 +93,8 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,mjs,ts,tsx,json,scss}": [
-      "prettier --write",
+      "pretty-quick --staged",
+      "eslint src/ --fix",
       "git add"
     ]
   },

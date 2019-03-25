@@ -1,6 +1,10 @@
 {
     "parser": "babel-eslint",
-    "extends": ["react-app", "semistandard-react", "plugin:prettier/recommended"],
+    "extends": [
+        "semistandard-react",
+        "plugin:prettier/recommended",
+        "prettier/react"
+    ],
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
@@ -11,7 +15,7 @@
     },
     "plugins": ["prettier"],
     "rules": {
-        "prettier/prettier": "error",
+        "prettier/prettier": "warn",
         "max-len": [
             "error",
             {

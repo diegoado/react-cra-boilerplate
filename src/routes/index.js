@@ -10,7 +10,7 @@ import App from '@components/app';
 const Routes = () => (
   <ConnectedRouter history={history} context={context}>
     <Switch>
-      <Route path="/" component={App} exact />
+      <Route path='/' component={App} exact />
     </Switch>
   </ConnectedRouter>
 );
