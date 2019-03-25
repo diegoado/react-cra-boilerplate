@@ -10,15 +10,15 @@ const cntReducer = createReducer(firstState, {
   DECREMENT: (state, _) => state - 1
 });
 
-it("create reducer should be a function", () => {
+it('create reducer should be a function', () => {
   expect(createReducer).to.be.a('function');
 });
 
-it("create reducer should return the reducer function", () => {
+it('create reducer should return the reducer function', () => {
   expect(createReducer(firstState, {})).to.be.a('function');
 });
 
-it("create reducer should create a reducer", () => {
+it('create reducer should create a reducer', () => {
   const before = 1;
   const action = deepFreeze({ type: 'INCREMENT' });
 
@@ -26,14 +26,14 @@ it("create reducer should create a reducer", () => {
   expect(cntReducer(before, action)).to.be.equal(after);
 });
 
-it("reducer should return latest state when given action is unknown", () => {
+it('reducer should return latest state when given action is unknown', () => {
   const before = 3;
   const action = deepFreeze({ type: 'UNKNOWN' });
 
   expect(cntReducer(before, action)).to.be.equal(before);
 });
 
-it("reducer should return first state when latest is undefined", () => {
+it('reducer should return first state when latest is undefined', () => {
   const before = undefined;
   const action = deepFreeze({});
 
