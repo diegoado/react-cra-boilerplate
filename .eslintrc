@@ -1,8 +1,9 @@
 {
     "parser": "babel-eslint",
     "extends": [
+        "react-app",
         "semistandard-react",
-        "plugin:prettier/recommended",
+        "prettier",
         "prettier/react"
     ],
     "parserOptions": {
@@ -13,7 +14,9 @@
             "experimentalObjectRestSpread": true
         }
     },
-    "plugins": ["prettier"],
+    "plugins": [
+        "prettier"
+    ],
     "rules": {
         "prettier/prettier": "warn",
         "max-len": [
