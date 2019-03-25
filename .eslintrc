@@ -3,8 +3,7 @@
     "extends": [
         "react-app",
         "semistandard-react",
-        "prettier",
-        "prettier/react"
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 6,
