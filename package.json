@@ -1,121 +1,116 @@
 {
-  "name": "react-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "build:analyzer": "source-map-explorer 'build/static/js/*.js'",
-    "test": "react-app-rewired test --env=jsdom --no-watch",
-    "test:watch": "npm test -- --watchAll",
-    "test:coverage": "npm run test:watch -- --coverage",
-    "lint": "semistandard --verbose | snazzy",
-    "lint:fix": "semistandard --fix",
-    "lint:watch": "gulp",
-    "eject": "react-app-rewired eject",
-    "storybook": "start-storybook -s public -c storybook -p 6006 --quiet",
-    "storybook:build": "build-storybook -s public -c storybook"
-  },
-  "devDependencies": {
-    "@hot-loader/react-dom": "^16.8.4",
-    "@storybook/addon-actions": "^3.4.12",
-    "@storybook/addon-links": "^3.4.12",
-    "@storybook/react": "^3.4.12",
-    "chai": "^4.2.0",
-    "customize-cra": "^0.2.12",
-    "deep-freeze": "0.0.1",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-config-react-app": "^3.0.8",
-    "eslint-config-semistandard-react": "^4.2.0",
-    "eslint-plugin-flowtype": "^3.4.2",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-semistandard-react": "^4.1.0",
-    "gulp": "^4.0.0",
-    "husky": "^1.3.1",
-    "jest-enzyme": "^7.0.2",
-    "lint-staged": "^8.1.5",
-    "node-sass": "^4.11.0",
-    "prettier": "^1.16.4",
-    "prettier-eslint": "^8.8.2",
-    "pretty-quick": "^1.10.0",
-    "react-app-rewire-hot-loader": "^2.0.1",
-    "react-app-rewired": "^2.1.1",
-    "react-hot-loader": "^4.8.0",
-    "react-test-renderer": "^16.8.5",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-mock-store": "^1.5.3",
-    "semistandard": "^13.0.1",
-    "snazzy": "^8.0.0",
-    "source-map-explorer": "^1.8.0"
-  },
-  "dependencies": {
-    "connected-react-router": "^6.3.2",
-    "history": "^4.9.0",
-    "immutable": "^3.8.1",
-    "normalize.css": "^8.0.1",
-    "preact": "^8.4.2",
-    "preact-compat": "^3.18.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-redux": "^6.0.1",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
-    "redux": "^4.0.1",
-    "redux-immutable": "^4.0.0",
-    "redux-thunk": "^2.3.0"
-  },
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.story.{js,jsx,mjs,ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!src/index.js",
-      "!src/serviceWorker.js",
-      "!src/setupTests.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
+    "name": "react-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "build:analyzer": "source-map-explorer 'build/static/js/*.js'",
+        "test": "react-app-rewired test --env=jsdom --no-watch",
+        "test:watch": "npm test -- --watchAll",
+        "test:coverage": "npm run test:watch -- --coverage",
+        "lint": "semistandard --verbose | snazzy",
+        "lint:fix": "semistandard --fix",
+        "lint:watch": "gulp",
+        "eject": "react-app-rewired eject",
+        "storybook": "start-storybook -s public -c storybook -p 6006 --quiet",
+        "storybook:build": "build-storybook -s public -c storybook"
     },
-    "coverageReporters": [
-      "text"
+    "devDependencies": {
+        "@hot-loader/react-dom": "^16.8.4",
+        "@storybook/addon-actions": "^3.4.12",
+        "@storybook/addon-links": "^3.4.12",
+        "@storybook/react": "^3.4.12",
+        "chai": "^4.2.0",
+        "customize-cra": "^0.2.12",
+        "deep-freeze": "0.0.1",
+        "enzyme": "^3.9.0",
+        "enzyme-adapter-react-16": "^1.11.2",
+        "eslint-config-react-app": "^3.0.8",
+        "eslint-plugin-flowtype": "^3.4.2",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "gulp": "^4.0.0",
+        "husky": "^1.3.1",
+        "jest-enzyme": "^7.0.2",
+        "lint-staged": "^8.1.5",
+        "node-sass": "^4.11.0",
+        "prettier": "^1.16.4",
+        "pretty-quick": "^1.10.0",
+        "react-app-rewire-hot-loader": "^2.0.1",
+        "react-app-rewired": "^2.1.1",
+        "react-hot-loader": "^4.8.0",
+        "react-test-renderer": "^16.8.5",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-mock-store": "^1.5.3",
+        "semistandard": "^13.0.1",
+        "snazzy": "^8.0.0",
+        "source-map-explorer": "^1.8.0"
+    },
+    "dependencies": {
+        "connected-react-router": "^6.3.2",
+        "history": "^4.9.0",
+        "immutable": "^3.8.1",
+        "normalize.css": "^8.0.1",
+        "preact": "^8.4.2",
+        "preact-compat": "^3.18.4",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.5",
+        "react-dom": "^16.8.5",
+        "react-redux": "^6.0.1",
+        "react-router-dom": "^5.0.0",
+        "react-scripts": "2.1.8",
+        "redux": "^4.0.1",
+        "redux-immutable": "^4.0.0",
+        "redux-thunk": "^2.3.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!src/**/*.story.{js,jsx,mjs,ts,tsx}",
+            "!<rootDir>/node_modules/",
+            "!src/index.js",
+            "!src/serviceWorker.js",
+            "!src/setupTests.js"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 90,
+                "functions": 90,
+                "lines": 90,
+                "statements": 90
+            }
+        },
+        "coverageReporters": [
+            "text"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.{js,jsx,mjs,ts,tsx,json,scss}": [
+            "pretty-quick --staged",
+            "eslint src/ --fix",
+            "git add"
+        ]
+    },
+    "semistandard": {
+        "globals": [
+            "test",
+            "it",
+            "xit",
+            "describe",
+            "fetch",
+            "localStorage"
+        ]
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,mjs,ts,tsx,json,scss}": [
-      "pretty-quick --staged",
-      "eslint src/ --fix",
-      "git add"
-    ]
-  },
-  "semistandard": {
-    "globals": [
-      "test",
-      "it",
-      "xit",
-      "describe",
-      "fetch",
-      "localStorage"
-    ]
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
 }

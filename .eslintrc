@@ -2,7 +2,6 @@
     "parser": "babel-eslint",
     "extends": [
         "react-app",
-        "semistandard-react",
         "plugin:prettier/recommended"
     ],
     "parserOptions": {
@@ -17,7 +16,9 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "warn",
+        "space-before-function-paren": 0,
+        "new-cap": 0,
+        "prettier/prettier": 2,
         "max-len": [
             "error",
             {
