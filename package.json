@@ -26,15 +26,13 @@
         "deep-freeze": "0.0.1",
         "enzyme": "^3.9.0",
         "enzyme-adapter-react-16": "^1.11.2",
-        "eslint-config-react-app": "^3.0.8",
-        "eslint-plugin-flowtype": "^3.4.2",
-        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-prettier": "^3.0.1",
         "gulp": "^4.0.0",
         "husky": "^1.3.1",
         "jest-enzyme": "^7.0.2",
         "lint-staged": "^8.1.5",
         "node-sass": "^4.11.0",
-        "prettier": "^1.16.4",
+        "prettier": "1.16.4",
         "pretty-quick": "^1.10.0",
         "react-app-rewire-hot-loader": "^2.0.1",
         "react-app-rewired": "^2.1.1",
@@ -93,7 +91,6 @@
     "lint-staged": {
         "src/**/*.{js,jsx,mjs,ts,tsx,json,scss}": [
             "pretty-quick --staged",
-            "eslint src/ --fix",
             "git add"
         ]
     },

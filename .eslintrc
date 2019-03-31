@@ -1,64 +1,7 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "react-app",
-        "plugin:prettier/recommended"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "ecmaFeatures": {
-            "jsx": true,
-            "generators": true,
-            "experimentalObjectRestSpread": true
-        }
-    },
-    "plugins": [
-        "prettier"
-    ],
+    "extends": "react-app",
+    "plugins": ["prettier"],
     "rules": {
-        "space-before-function-paren": 0,
-        "new-cap": 0,
-        "prettier/prettier": 2,
-        "max-len": [
-            "error",
-            {
-                "code": 80,
-                "ignoreUrls": true,
-                "ignoreComments": true
-            }
-        ],
-        "no-empty-pattern": 0,
-        "react/prop-types": [
-            0,
-            {
-                "ignore": ["className", "children", "location", "params", "location*"]
-            }
-        ],
-        "no-param-reassign": [
-            0,
-            {
-                "props": false
-            }
-        ],
-        "prefer-rest-params": 1,
-        "arrow-body-style": 0,
-        "prefer-template": 0,
-        "react/prefer-stateless-function": 0,
-        "react/jsx-no-bind": [
-            0,
-            {
-                "ignoreRefs": false,
-                "allowArrowFunctions": true,
-                "allowBind": true
-            }
-        ]
-    },
-    "globals": {
-        "test": true,
-        "it": true,
-        "xit": true,
-        "describe": true,
-        "fetch": true,
-        "localStorage": true
+        "prettier/prettier": "error"
     }
 }
