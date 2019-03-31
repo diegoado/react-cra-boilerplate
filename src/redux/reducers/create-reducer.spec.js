@@ -40,20 +40,20 @@ it('reducer should return first state when latest is undefined', () => {
   expect(cntReducer(before, action)).to.be.equal(firstState);
 });
 
-it("first state shouldn't be undefined", () => {
+it('first state should not be undefined', () => {
   try {
     createReducer(undefined, {});
     expect.fail(null, null, 'error expected');
   } catch (e) {
-    expect(e.message).to.be.equal("first state mustn't be undefined");
+    expect(e.message).to.be.equal('first state must not be undefined');
   }
 });
 
-it("reducer's actions shouldn't be different of object", () => {
+it('reducers actions should not be different of object', () => {
   try {
     createReducer(firstState);
     expect.fail(null, null, 'error expected');
   } catch (e) {
-    expect(e.message).to.be.equal("The reducer's actions must be an object");
+    expect(e.message).to.be.equal('the reducers actions must be an object');
   }
 });
