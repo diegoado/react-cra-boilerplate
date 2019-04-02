@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import styles from './app.module.scss';
 
 class App extends PureComponent {
-  render () {
+  render() {
     return (
       <div className={styles.app}>
         <header className={styles.header}>
