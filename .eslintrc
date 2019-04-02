@@ -1,7 +1,13 @@
 {
-    "extends": ["react-app", "semistandard-react"],
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": "error"
+    "extends": ["react-app", "plugin:prettier/recommended"],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "es6": true,
+        "node": true
     }
 }
