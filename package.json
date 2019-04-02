@@ -34,7 +34,6 @@
         "lint-staged": "^8.1.5",
         "node-sass": "^4.11.0",
         "prettier": "1.16.4",
-        "prettier-standard": "^9.1.1",
         "prettier-style": "^0.1.2",
         "pretty-quick": "^1.10.0",
         "react-app-rewire-hot-loader": "^2.0.1",
@@ -94,7 +93,6 @@
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx,json}": [
             "pretty-quick --staged",
-            "prettier-standard",
             "git add"
         ],
         "src/**/*.{css,scss}": [
