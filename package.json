@@ -9,7 +9,7 @@
         "test": "react-app-rewired test --env=jsdom --no-watch",
         "test:watch": "npm test -- --watchAll",
         "test:coverage": "npm run test:watch -- --coverage",
-        "lint": "semistandard --verbose | snazzy",
+        "lint": "eslint src/**/*.{js,jsx}",
         "lint:fix": "semistandard --fix",
         "lint:watch": "gulp",
         "eject": "react-app-rewired eject",
@@ -94,9 +94,9 @@
         }
     },
     "lint-staged": {
-        "*.{js,jsx,ts,tsx}": [
+        "src/**/*.{js,jsx}": [
             "pretty-quick --staged",
-            "eslint src/ --fix",
+            "eslint --fix",
             "git add"
         ],
         "src/**/*.{css,scss}": [
