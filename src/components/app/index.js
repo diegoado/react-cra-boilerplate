@@ -10,7 +10,7 @@ class App extends PureComponent {
         <header className={styles.header}>
           <img src={logo} className={styles.logo} alt='logo' />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit <code>src/App.js</code> and save to reload!
           </p>
           <a
             className={styles.link}
