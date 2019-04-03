@@ -45,7 +45,7 @@ it('first state should not be undefined', () => {
     createReducer(undefined, {});
     expect.fail(null, null, 'error expected');
   } catch (e) {
-    expect(e.message).to.be.equal('first state must not be undefined');
+    expect(e.message).to.be.equal("first state mustn't be undefined");
   }
 });
 
@@ -54,6 +54,6 @@ it('reducers actions should not be different of object', () => {
     createReducer(firstState);
     expect.fail(null, null, 'error expected');
   } catch (e) {
-    expect(e.message).to.be.equal('the reducers actions must be an object');
+    expect(e.message).to.be.equal("the reducer's actions must be an object");
   }
 });

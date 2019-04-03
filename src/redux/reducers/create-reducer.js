@@ -3,7 +3,7 @@ const createReducer = (start, actions) => {
     throw new Error("first state mustn't be undefined");
   }
   if (Object.prototype.toString.call(actions) !== '[object Object]') {
-    throw new Error("The reducer's actions must be an object");
+    throw new Error("the reducer's actions must be an object");
   }
 
   return (state = start, { type, payload }) =>
