@@ -4,8 +4,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 
-import history from '../../routes/history';
-import createRootReducer from '../reducers';
+import history from 'routes/history';
+import createRootReducer from 'reducers';
 
 const composeEnhancers = composeWithDevTools({
   // Specify name here, actionsBlacklist, actionsCreators and other options if needed
@@ -36,8 +36,8 @@ const configureStore = ({ firstState } = Immutable.Map()) => {
   );
 
   if (module.hot) {
-    module.hot.accept('../reducers', () => {
-      const nextCreateRootReducer = require('../reducers').default;
+    module.hot.accept('reducers', () => {
+      const nextCreateRootReducer = require('reducers').default;
       appStore.replaceReducer(nextCreateRootReducer(history));
     });
   }

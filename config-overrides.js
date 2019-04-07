@@ -6,7 +6,8 @@ const { override, useEslintRc, addWebpackAlias } = require('customize-cra');
 const { paths } = require('react-app-rewired');
 
 let aliases = {
-  '@components': path.resolve(__dirname, `${paths.appSrc}/components/`),
+  reducers: path.resolve(__dirname, `${paths.appSrc}/redux/reducers`),
+  store: path.resolve(__dirname, `${paths.appSrc}/redux/store`),
   'react-dom': '@hot-loader/react-dom'
 };
 

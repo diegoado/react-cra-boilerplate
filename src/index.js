@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 
-import Routes from './routes';
+import Routes from 'routes';
 
-import context from './context';
-import createStore from './redux/store';
+import context from 'context';
+import createStore from 'store';
 
 import './styles.scss';
 import * as serviceWorker from './serviceWorker';
@@ -29,8 +29,8 @@ const renderApp = AppRoutes => {
 renderApp(Routes);
 
 if (module.hot) {
-  module.hot.accept('./routes', () => {
-    const AppRoutes = require('./routes').default;
+  module.hot.accept('routes', () => {
+    const AppRoutes = require('routes').default;
     renderApp(AppRoutes);
   });
 }
