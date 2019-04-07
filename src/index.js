@@ -1,13 +1,15 @@
+import 'normalize.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 
-import createStore from './redux/store';
-import context from './context';
 import Routes from './routes';
 
-import 'normalize.css';
+import context from './context';
+import createStore from './redux/store';
+
 import './styles.scss';
 import * as serviceWorker from './serviceWorker';
 

@@ -1,13 +1,48 @@
 {
-    "extends": ["react-app", "plugin:prettier/recommended"],
+    "extends": [
+        "react-app",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["jsx-a11y", "prettier"],
     "parserOptions": {
         "sourceType": "module",
+        "ecmaVersion": 2018,
         "ecmaFeatures": {
             "jsx": true
         }
     },
     "env": {
+        "browser": true,
+        "commonjs": true,
         "es6": true,
         "node": true
+    },
+    "rules": {
+        "constructor-super": "warn",
+        "import/imports-first": ["error", "absolute-first"],
+        "import/newline-after-import": "error",
+        "indent": ["error", 2],
+        "no-const-assign": "warn",
+        "no-extra-semi": "error",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-underscore-dangle": 0,
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "react/prop-types": [
+            1,
+            {
+                "ignore": ["className", "children", "location", "params", "location*"]
+            }
+        ],
+        "semi": ["error", "always"],
+        "prettier/prettier": "error",
+        "valid-typeof": "warn"
+    },
+    "globals": {
+        "window": true,
+        "document": true,
+        "localStorage": true,
+        "navigator": true
     }
 }

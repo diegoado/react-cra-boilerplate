@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
 import { composeWithDevTools } from 'redux-devtools-extension';
-
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
 
